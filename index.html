@@ -1,1 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#090a0c] text-[#b0b5c0]">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timothée Bacher — Regestum & Scripta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        archive: {
+                            bg: '#090a0c',
+                            card: '#0f1115',
+                            border: '#1e222b',
+                            gold: '#c2a370',
+                            text: '#c5c9d3',
+                            muted: '#6b7280'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #090a0c;
+            background-image: radial-gradient(#1e222b 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+        .portrait-frame {
+            box-shadow: 0 0 35px rgba(0,0,0,0.9);
+            filter: grayscale(40%) sepia(10%) contrast(105%);
+            transition: filter 0.5s ease, border-color 0.5s ease;
+        }
+        .portrait-frame:hover {
+            filter: grayscale(0%) contrast(100%);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #090a0c; }
+        ::-webkit-scrollbar-thumb { background: #1e222b; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c2a370; }
+        .entry-link {
+            transition: color 0.2s ease;
+            cursor: pointer;
+        }
+        .entry-link:hover {
+            color: #c2a370;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-serif antialiased selection:bg-archive-gold/20 selection:text-archive-gold flex items-center justify-center">
 
+    <main class="max-w-3xl w-full mx-auto px-6 py-16 md:py-24 space-y-16">
+
+        <!-- HEADER -->
+        <header class="text-center space-y-4">
+
+            <!-- Portrait -->
+            <div class="flex justify-center mb-6">
+                <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border border-archive-border overflow-hidden portrait-frame">
+                    <!-- ⚠️ REMPLACEZ "images/portrait.jpg" par le chemin de votre photo -->
+                    <img src="images/portrait.jpg" 
+                         alt="Timothée Bacher" 
+                         class="w-full h-full object-cover grayscale opacity-85 hover:opacity-100 transition-opacity" />
+                </div>
+            </div>
+
+            <h1 class="text-2xl md:text-4xl font-normal text-white tracking-tight">
+                Timothée Bacher
+            </h1>
+            <p class="text-sm text-archive-muted font-serif italic">
+                product strategist · essayist
+            </p>
+            <p class="text-sm md:text-base text-archive-text font-serif leading-relaxed max-w-md mx-auto">
+                "I walk through lands, stories, and systems."
+            </p>
+
+        </header>
+
+        <!-- PILIERS -->
+        <section class="space-y-6">
+
+            <!-- Ligne 1 : 01 + 02 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- 01 / PRISM -->
+                <!-- ⚠️ REMPLACEZ href="https://substack.com" par votre URL Substack -->
+                <a href="https://substack.com" target="_blank" 
+                   class="group block bg-archive-card border border-archive-border hover:border-archive-gold/40 p-6 transition-all duration-300 space-y-2">
+                    <div class="font-mono text-[11px] text-archive-gold tracking-wider">
+                        01 / PRISM
+                    </div>
+                    <h2 class="text-lg md:text-xl font-normal text-white group-hover:text-archive-gold transition-colors">
+                        Essays &amp; Geopolitics
+                    </h2>
+                    <p class="text-sm text-archive-muted leading-relaxed font-serif">
+                        On power structures, architectural history, and territorial transformations.
+                    </p>
+                </a>
+
+                <!-- 02 / FRAGMENTS -->
+                <a href="#register" 
+                   class="group block bg-archive-card border border-archive-border hover:border-archive-gold/40 p-6 transition-all duration-300 space-y-2">
+                    <div class="font-mono text-[11px] text-archive-gold tracking-wider">
+                        02 / FRAGMENTS
+                    </div>
+                    <h2 class="text-lg md:text-xl font-normal text-white group-hover:text-archive-gold transition-colors">
+                        Exile Tales
+                    </h2>
+                    <p class="text-sm text-archive-muted leading-relaxed font-serif">
+                        Prose from the road, intimate cartographies.
+                    </p>
+                </a>
+
+            </div>
+
+            <!-- Ligne 2 : 03 + 04 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- 03 / SYSTEMA -->
+                <!-- ⚠️ REMPLACEZ href="https://github.com" par votre URL GitHub -->
+                <a href="https://github.com" target="_blank" 
+                   class="group block bg-archive-card border border-archive-border hover:border-archive-gold/40 p-6 transition-all duration-300 space-y-2">
+                    <div class="font-mono text-[11px] text-archive-gold tracking-wider">
+                        03 / SYSTEMA
+                    </div>
+                    <h2 class="text-lg md:text-xl font-normal text-white group-hover:text-archive-gold transition-colors">
+                        Code &amp; Prototypes
+                    </h2>
+                    <p class="text-sm text-archive-muted leading-relaxed font-serif">
+                        Open-source tools, APIs, and lightweight architectures — tested before built.
+                    </p>
+                </a>
+
+                <!-- 04 / SONUS -->
+                <a href="#sonus" 
+                   class="group block bg-archive-card border border-archive-border hover:border-archive-gold/40 p-6 transition-all duration-300 space-y-2">
+                    <div class="font-mono text-[11px] text-archive-gold tracking-wider">
+                        04 / SONUS
+                    </div>
+                    <h2 class="text-lg md:text-xl font-normal text-white group-hover:text-archive-gold transition-colors">
+                        Ambiances
+                    </h2>
+                    <p class="text-sm text-archive-muted leading-relaxed font-serif">
+                        Recorded atmospheres, 2003–2024.
+                    </p>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- REGESTUM -->
+        <section id="register" class="space-y-4 pt-4 border-t border-archive-border/40">
+            <div class="flex items-center justify-between font-mono text-[10px] text-archive-muted tracking-wider">
+                <span>REGESTUM</span>
+                <span>INDEX</span>
+            </div>
+
+            <div class="space-y-2">
+
+                <!-- ⚠️ REMPLACEZ les liens par vos articles Substack ou gardez les modals -->
+                <a href="#" onclick="openModal('entry-1'); return false;" 
+                   class="entry-link block text-sm text-archive-text hover:text-archive-gold transition-colors border-b border-archive-border/20 pb-2">
+                    <span class="font-mono text-[10px] text-archive-muted mr-3">2026.08</span>
+                    The Tuff Stone Grid: Architecture, Chess, and Cold War Lineages
+                </a>
+
+                <a href="#" onclick="openModal('entry-2'); return false;" 
+                   class="entry-link block text-sm text-archive-text hover:text-archive-gold transition-colors border-b border-archive-border/20 pb-2">
+                    <span class="font-mono text-[10px] text-archive-muted mr-3">2026.06</span>
+                    On the Black Sea Coast: Card Games, Sea Shells, Distant Horizons
+                </a>
+
+                <a href="#" onclick="openModal('entry-3'); return false;" 
+                   class="entry-link block text-sm text-archive-text hover:text-archive-gold transition-colors">
+                    <span class="font-mono text-[10px] text-archive-muted mr-3">2026.05</span>
+                    Disassembling the Raketa 2609: Mechanical Time in the Vernissage
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SONUS -->
+        <div id="sonus" class="pt-4 border-t border-archive-border/40">
+            <div class="font-mono text-[10px] text-archive-muted tracking-wider mb-3">
+                SONUS / AMBIANCES
+            </div>
+            <p class="text-sm text-archive-muted font-serif italic leading-relaxed">
+                A few tape recordings from Sofia, Varna, and Yerevan.
+                <span class="block text-xs text-archive-muted/60 mt-1">
+                    (SoundCloud links to be added)
+                </span>
+            </p>
+            <div class="mt-3 space-y-2">
+                <div class="bg-archive-card/40 border border-archive-border/50 p-2 rounded">
+                    <span class="text-xs text-archive-muted font-mono">→ track 1 (placeholder)</span>
+                </div>
+                <div class="bg-archive-card/40 border border-archive-border/50 p-2 rounded">
+                    <span class="text-xs text-archive-muted font-mono">→ track 2 (placeholder)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div class="text-center space-y-4 pt-8 border-t border-archive-border/40">
+            <h2 class="text-lg md:text-xl font-normal text-white">— Let’s work together —</h2>
+            <p class="text-sm text-archive-muted font-serif italic max-w-md mx-auto">
+                I work with teams on strategy, architecture, and product execution.
+                If that sounds like what you need, let’s talk.
+            </p>
+            <a href="contact.html" 
+               class="inline-block border border-archive-gold/40 hover:border-archive-gold text-archive-gold hover:text-white px-6 py-2 text-sm font-mono transition-all duration-300">
+                Contact
+            </a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="pt-8 border-t border-archive-border/40 text-center space-y-4">
+            <p class="text-xs text-archive-muted font-serif italic">
+                Timothée Bacher — Regestum &amp; Scripta
+            </p>
+            <div class="flex justify-center gap-6 font-mono text-[10px] text-archive-muted/60">
+                <!-- ⚠️ REMPLACEZ LES LIENS CI-DESSOUS PAR VOS PROFILS -->
+                <a href="https://linkedin.com" target="_blank" class="hover:text-archive-gold transition-colors">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="hover:text-archive-gold transition-colors">GitHub</a>
+                <a href="https://substack.com" target="_blank" class="hover:text-archive-gold transition-colors">Substack</a>
+                <a href="about.html" class="hover:text-archive-gold transition-colors">About</a>
+                <a href="contact.html" class="hover:text-archive-gold transition-colors">Contact</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- MODALS -->
+    <div id="entry-1" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-archive-card border border-archive-border max-w-xl w-full max-h-[80vh] overflow-y-auto p-6 space-y-4 relative rounded-sm shadow-2xl">
+            <button onclick="closeModal('entry-1')" class="absolute top-3 right-3 font-mono text-xs text-archive-muted hover:text-white">✕</button>
+            <div>
+                <div class="font-mono text-[10px] text-archive-gold tracking-wider">2026.08 — Geopolitics</div>
+                <h2 class="text-xl font-normal text-white mt-1">The Tuff Stone Grid</h2>
+            </div>
+            <div class="text-sm text-archive-text font-serif leading-relaxed space-y-3 border-t border-archive-border/50 pt-3">
+                <p>Walking through urban grids shaped by pink volcanic tuff reveals a stark duality: the visual permanence of ancient stone contrasted with the rapid fluidity of modern software systems.</p>
+                <p>Under Soviet-era planning, engineering and strategic calculation were not merely professional choices but cultural survival mechanisms. Chess was embedded into early education, shaping how technical logic, strategic depth, and modular design evolved across generations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="entry-2" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-archive-card border border-archive-border max-w-xl w-full max-h-[80vh] overflow-y-auto p-6 space-y-4 relative rounded-sm shadow-2xl">
+            <button onclick="closeModal('entry-2')" class="absolute top-3 right-3 font-mono text-xs text-archive-muted hover:text-white">✕</button>
+            <div>
+                <div class="font-mono text-[10px] text-archive-gold tracking-wider">2026.06 — Prose</div>
+                <h2 class="text-xl font-normal text-white mt-1">On the Black Sea Coast</h2>
+            </div>
+            <div class="text-sm text-archive-text font-serif leading-relaxed space-y-3 border-t border-archive-border/50 pt-3">
+                <p>The coastline in early summer retains a quiet, muted grey. Sitting near the water with a deck of historic cards, teaching rules preserved across centuries offers a sense of temporal continuity.</p>
+                <p>Exile is rarely a sudden rupture; it is an accumulation of landscapes, dialects, and small rituals repeated in new settings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="entry-3" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-archive-card border border-archive-border max-w-xl w-full max-h-[80vh] overflow-y-auto p-6 space-y-4 relative rounded-sm shadow-2xl">
+            <button onclick="closeModal('entry-3')" class="absolute top-3 right-3 font-mono text-xs text-archive-muted hover:text-white">✕</button>
+            <div>
+                <div class="font-mono text-[10px] text-archive-gold tracking-wider">2026.05 — Horology</div>
+                <h2 class="text-xl font-normal text-white mt-1">Disassembling the Raketa 2609</h2>
+            </div>
+            <div class="text-sm text-archive-text font-serif leading-relaxed space-y-3 border-t border-archive-border/50 pt-3">
+                <p>Sourcing a mechanical movement from an open-air market stall brings an encounter with physical history. The Raketa 2609 caliber is utilitarian, built with thick plates and explicit tolerances meant to survive wear.</p>
+                <p>Under a loupe, removing the balance wheel and mainspring barrel reveals a tactile contrast to modern digital interfaces.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('[id^="entry-"]').forEach(m => m.classList.add('hidden'));
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+
+</body>
+</html>
