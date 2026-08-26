@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#090a0c] text-[#b0b5c0]">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Timothée Bacher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Newsreader', 'Georgia', 'serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        archive: {
+                            bg: '#090a0c',
+                            card: '#0f1115',
+                            border: '#1e222b',
+                            gold: '#c2a370',
+                            text: '#c5c9d3',
+                            muted: '#6b7280'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #090a0c;
+            background-image: radial-gradient(#1e222b 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #090a0c; }
+        ::-webkit-scrollbar-thumb { background: #1e222b; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c2a370; }
+    </style>
+</head>
+<body class="min-h-screen font-serif antialiased selection:bg-archive-gold/20 selection:text-archive-gold flex items-center justify-center">
 
+    <main class="max-w-3xl w-full mx-auto px-6 py-16 md:py-24 space-y-16">
+
+        <header class="text-center space-y-4">
+            <a href="index.html" class="font-mono text-[10px] text-archive-gold/60 hover:text-archive-gold transition-colors tracking-wider">← REGESTUM</a>
+            <h1 class="text-2xl md:text-4xl font-normal text-white tracking-tight">About</h1>
+            <p class="text-sm text-archive-muted font-serif italic">Product Strategist · Essayist · Peregrinator</p>
+        </header>
+
+        <div class="space-y-8 text-archive-text font-serif leading-relaxed">
+
+            <section class="space-y-4">
+                <h2 class="text-lg font-normal text-white border-b border-archive-border/40 pb-2">A Life Between Systems and Territories</h2>
+                <p>I was born in Alsace, left at 24, and have since lived between Sofia, Varna, and Yerevan. I speak the languages of software architecture and of ancient roads. I am a father, a son, an observer of the lines that connect people to places, ideas to infrastructures.</p>
+                <p>My professional life is built around the design of digital systems — APIs, product strategies, software architectures — and the conviction that durable structures require both technical precision and human understanding.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-lg font-normal text-white border-b border-archive-border/40 pb-2">What I Bring to a Team</h2>
+                <ul class="list-disc pl-5 space-y-2 text-sm">
+                    <li><strong>Technical Product Strategy</strong> — from business logic to resilient architectures.</li>
+                    <li><strong>API &amp; SDK Design</strong> — scalable, developer-friendly, open-first.</li>
+                    <li><strong>Fractional Product Leadership</strong> — I work with teams that need direction without a full-time hire.</li>
+                    <li><strong>Systems Thinking</strong> — I see software not as code, but as a living structure that reflects the organizations that build it.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-lg font-normal text-white border-b border-archive-border/40 pb-2">Why I Write</h2>
+                <p>I write to understand. My essays explore the intersections of geopolitics, technology, and the human condition of displacement. I draw from history, architecture, and classical literature — not as ornament, but as method.</p>
+                <p>Every system is a story. Every story is a system.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="text-lg font-normal text-white border-b border-archive-border/40 pb-2">Selected Experience</h2>
+                <div class="space-y-3 text-sm">
+                    <div><span class="font-mono text-[10px] text-archive-muted">2020–2024</span> — Product Strategy &amp; Architecture (various B2B SaaS companies, remote)</div>
+                    <div><span class="font-mono text-[10px] text-archive-muted">2015–2020</span> — Technical Product Management (e-learning platforms, APIs, developer tools)</div>
+                    <div><span class="font-mono text-[10px] text-archive-muted">2009–2015</span> — Software Engineering &amp; Systems Design (Eastern Europe &amp; Caucasus)</div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="pt-8 border-t border-archive-border/40 text-center space-y-4">
+            <a href="index.html" class="text-xs text-archive-muted hover:text-archive-gold transition-colors font-mono">← Return to Regestum</a>
+        </footer>
+
+    </main>
+
+</body>
+</html>
